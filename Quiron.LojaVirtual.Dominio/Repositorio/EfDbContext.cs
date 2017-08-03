@@ -4,6 +4,9 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Quiron.LojaVirtual.Dominio.Repositorio
 {
+    /// <summary>
+    /// Classe como se Fosse a camada DAL de Acesso Direto ao Banco
+    /// </summary>
     public class EfDbContext : DbContext
     {
         /// <summary>
