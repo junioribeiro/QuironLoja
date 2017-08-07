@@ -7,14 +7,8 @@
 
 @foreach (var item in Model.Produtos)
 {
-
-    <div>
-        <h3>@item.Nome</h3>
-        @item.Descricao
-        <h3>@item.Preco.ToString("C")</h3>
-    </div>
+    @Html.Partial("ProdutoDetalhes", item)
 }
-@Html.PageLinks(Model.Paginacao, x => Url.Action("ListarProdutos", new { pagina = x }))
-
+<div>@Html.PageLinks(Model.Paginacao, x => Url.Action("ListarProdutos", new { pagina = x, categoria = Model.Categoria }))</div>
 
 
